@@ -4,7 +4,7 @@ window.addEventListener('load', () => {
     let second = document.querySelector("#second");
     // let currenthour = time.getHours();
     let beneth = document.querySelector('.beneth');
-    for (let index = 0; index < 60; index++) {
+    for (let index = 0; index < 30; index++) {
         const element = document.createElement('div');
         element.style.transform = `rotate(${index * 6}deg)`;
         beneth.appendChild(element);
