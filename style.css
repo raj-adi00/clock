@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#clock_body{
+    height: 50vh;
+    width: 50vh;
+    /* background-color: green; */
+    border-radius: 50%;
+    border: solid;
+    position: relative;
+    overflow: hidden;
+}
+#clock_body > div{
+    position: absolute;
+}
+.beneth{
+    /* background-color: rgb(223, 222, 222); */
+    width: 100%;
+    height: 100%;
+}
+.beneth > div {
+    width: 100%;
+    height: 1px;
+    background-color: rgb(118, 117, 117);
+    position: absolute;
+    transform-origin: 50% 50%;
+    top: calc(50% - 0.5px);
+
+}
+.beneth > div:nth-child(5n+1){
+    height: 2px;
+    top: calc(50% - 1px);
+    background-color: black;
+}
+.beneth > div:nth-child(15n+1){
+    background-color: transparent;
+    border-style: solid none;
+    height: 8px;
+    top: calc(50% - 4px);
+}
+.top{
+    background-color: white;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    top: 15px;
+    left: 15px;
+    border-radius: 50%;
+}
+.top > div{
+    position: absolute;
+    transform: rotate(-90deg);
+}
+/*  */
+
+#hour{
+    height: 10px;
+    background-color: black;
+    width: 30%;
+    top: calc(50% - 5px);
+    transform-origin: 0% 50%;
+    left: 50%;
+    /* transform: rotate(0deg); */
+    border-radius: 100px;
+    transition: all 1s ease;
+}
+#minute{
+    height: 5px;
+    background-color: black;
+    width: 40%;
+    top: calc(50% - 2.5px);
+    transform-origin: 0% 50%;
+    left: 50%;
+    /* transform: rotate(deg); */
+    border-radius: 100px;
+    /* transition: all 1s ease-in-out; */
+}
+#second{
+    height: 2px;
+    background-color: black;
+    width: calc(50% - 1px);
+    top: calc(50% - 1px);
+    transform-origin: 0% 50%;
+    left: 50%;
+    /* transform: rotate(150deg); */
+    border-radius: 100px;
+    background-color: red;
+}
+#circle{
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    transform-origin: 50% 50%;
+    top: calc(50% - 7.5px);
+    left: calc(50% - 7.5px);
+    border-radius: 50%;
+}
