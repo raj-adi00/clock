@@ -1,14 +1,16 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     /* background-color: red; */
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
-#clock_body{
+
+#clock_body {
     height: 50vh;
     width: 50vh;
     /* background-color: green; */
@@ -17,49 +19,61 @@ body{
     position: relative;
     overflow: hidden;
 }
-#clock_body > div{
+
+#clock_body>div {
     position: absolute;
+    /*position absolute sends every member to the beginning of parent container and thus they can overlap*/
 }
-.beneth{
+
+.beneth {
     /* background-color: rgb(223, 222, 222); */
     width: 100%;
     height: 100%;
 }
-.beneth > div {
+
+.beneth>div {
     width: 100%;
     height: 1px;
     background-color: rgb(118, 117, 117);
     position: absolute;
     transform-origin: 50% 50%;
+    /*transform origin shift the origin for transformation. By default it is center Transformtion occurs about that origin.*/
     top: calc(50% - 0.5px);
+    /*Using percentage takes value of parent. It works relative to parent*/
 
 }
-.beneth > div:nth-child(5n+1){
+
+.beneth>div:nth-child(5n+1) {
     height: 2px;
     top: calc(50% - 1px);
     background-color: black;
 }
-.beneth > div:nth-child(15n+1){
+
+.beneth>div:nth-child(15n+1) {
     background-color: transparent;
     border-style: solid none;
     height: 8px;
     top: calc(50% - 4px);
 }
-.top{
+
+.top {
     background-color: white;
     width: calc(100% - 30px);
+    /*Here 100% means 100% of parent element*/
     height: calc(100% - 30px);
     top: 15px;
     left: 15px;
     border-radius: 50%;
 }
-.top > div{
+
+.top>div {
     position: absolute;
     transform: rotate(-90deg);
 }
+
 /*  */
 
-#hour{
+#hour {
     height: 10px;
     background-color: black;
     width: 30%;
@@ -70,7 +84,8 @@ body{
     border-radius: 100px;
     transition: all 1s ease;
 }
-#minute{
+
+#minute {
     height: 5px;
     background-color: black;
     width: 40%;
@@ -81,7 +96,8 @@ body{
     border-radius: 100px;
     /* transition: all 1s ease-in-out; */
 }
-#second{
+
+#second {
     height: 2px;
     background-color: black;
     width: calc(50% - 1px);
@@ -92,7 +108,8 @@ body{
     border-radius: 100px;
     background-color: red;
 }
-#circle{
+
+#circle {
     width: 15px;
     height: 15px;
     background-color: red;
