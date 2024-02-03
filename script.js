@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
         let hour_time = time.getHours() % 12;
         second.style.transform = `rotate(${second_time * 6 - 90}deg)`;
         minute.style.transform = `rotate(${minute_time * 6 - 90 + 6 * second_time / 60}deg)`;
-        hour.style.transform = `rotate(${hour_time * 30 - 90 + 0.5 * minute_time }deg)`;
+        hour.style.transform = `rotate(${hour_time * 30 - 90 + 0.5 * minute_time}deg)`;
         console.log(minute_time)
     }, 1000);
 });
