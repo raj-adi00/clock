@@ -34,6 +34,7 @@ window.addEventListener('load', () => {
             remove_alarm[index].addEventListener("click", () => {
                 document.getElementById("alarmlist").removeChild(remove_alarm[index]);
                 settime_hour[index]=25;
+                settime_minute[index]=61;
             });
         }
     });
