@@ -145,13 +145,14 @@ body {
 }
 
 /*  */
-#alarm{
+#alarm {
     display: flex;
     justify-content: center;
     width: 100vw;
     flex-direction: column;
     align-items: center;
 }
+
 #ring {
     top: 0px;
     left: 50%;
@@ -166,7 +167,7 @@ body {
     /* margin-left: calc(50vw - 5vw); */
     margin-bottom: 5px;
     /* position: fixed; */
-    
+
 }
 
 #ring:hover {
@@ -193,12 +194,14 @@ body {
     justify-content: space-around;
     box-shadow: 4px 4px 9px 0px #8a8a8a Inset, 2px 2px 11px 2px #d4d4d4 Inset;
 }
-#alarmlist div button{
+
+#alarmlist div button {
     background-color: rgb(173, 173, 182);
     font-size: 1.1rem;
     font-weight: 500;
-    box-shadow: 1px 1px 2px 2px rgb(173, 173, 182) ;
+    box-shadow: 1px 1px 2px 2px rgb(173, 173, 182);
 }
-#alarmlist div button::hover{
+
+#alarmlist div button::hover {
     cursor: pointer;
 }

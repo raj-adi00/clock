@@ -33,6 +33,7 @@ window.addEventListener('load', () => {
         for (let index = 0; index < remove_alarm.length; index++) {
             remove_alarm[index].addEventListener("click", () => {
                 document.getElementById("alarmlist").removeChild(remove_alarm[index]);
+                settime_hour[index]=25;
             });
         }
     });
@@ -51,13 +52,10 @@ window.addEventListener('load', () => {
         second.style.transform = `rotate(${second_time * 6 - 90}deg)`;
         minute.style.transform = `rotate(${minute_time * 6 - 90 + 6 * second_time / 60}deg)`;
         hour.style.transform = `rotate(${hour_time * 30 - 90 + 0.5 * minute_time}deg)`;
-
         for (let index = 0; index < settime_hour.length; index++) {
             if (settime_hour[index] == hour_time && settime_minute[index] == minute_time && second_time == 0) {
                 play_music();
             }
         }
     }, 1000);
-
-
 });
