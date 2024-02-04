@@ -8,22 +8,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 10vh;
+    gap: 6vh;
     height: 100vh;
 }
 
 #title {
-   background-color: #1047eb8c;
-   font-weight: 700;
-   font-size: 1.5rem;
-   border-radius: 20px;
-   padding: 0 5px;
-   /* height: 8vh; */
-   font-family: 'Roboto', sans-serif;
-   color: #15ce8c;
-   box-shadow:4px 4px 10px #c81859;
+    background-color: #1047eb8c;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    padding: 0 5px;
+    /* height: 8vh; */
+    font-family: 'Roboto', sans-serif;
+    color: #15ce8c;
+    box-shadow: 4px 4px 10px #c81859;
 }
-#title h2{
+
+#title h2 {
     /* padding: 0 10px; */
     margin: 0px;
 }
@@ -141,4 +142,63 @@ body {
     top: calc(50% - 7.5px);
     left: calc(50% - 7.5px);
     border-radius: 50%;
+}
+
+/*  */
+#alarm{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+}
+#ring {
+    top: 0px;
+    left: 50%;
+    width: 11vw;
+    padding: 2px;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: #15ce8c;
+    background-color: #1047eb8c;
+    box-shadow: 1px 1px 5px 1px rgb(128, 124, 126);
+    /* margin-left: calc(50vw - 5vw); */
+    margin-bottom: 5px;
+    /* position: fixed; */
+    
+}
+
+#ring:hover {
+    cursor: pointer;
+}
+
+#alarmlist {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+#alarmlist>div {
+    background-color: white;
+    width: 25vw;
+    height: 5vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: 1000;
+    font-size: 1.3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 4px 4px 9px 0px #8a8a8a Inset, 2px 2px 11px 2px #d4d4d4 Inset;
+}
+#alarmlist div button{
+    background-color: rgb(173, 173, 182);
+    font-size: 1.1rem;
+    font-weight: 500;
+    box-shadow: 1px 1px 2px 2px rgb(173, 173, 182) ;
+}
+#alarmlist div button::hover{
+    cursor: pointer;
 }
