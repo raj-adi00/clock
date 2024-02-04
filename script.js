@@ -45,8 +45,12 @@ window.addEventListener('load', () => {
             tone.pause();
         }, 10000);
     }
+    let time = new Date();
+    second.style.transform = `rotate(${(time.getSeconds()) * 6 - 90}deg)`;
+    minute.style.transform = `rotate(${time.getMinutes() * 6 - 90 + 6 * time.getSeconds() / 60}deg)`;
+    hour.style.transform = `rotate(${time.getHours()%12 * 30 - 90 + 0.5 * time.getMinutes()}deg)`;
     setInterval(() => {
-        let time = new Date();
+         time = new Date();
         let second_time = time.getSeconds();
         let minute_time = time.getMinutes();
         let hour_time = time.getHours() % 12;
@@ -59,4 +63,5 @@ window.addEventListener('load', () => {
             }
         }
     }, 1000);
+    document.getElementById("preloader").style.display='none';
 });
