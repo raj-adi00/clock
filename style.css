@@ -253,4 +253,7 @@ body {
     body{
         gap: 100px;
     }
+    #alarmlist>div{
+        width: 60vw;
+    }
 }
