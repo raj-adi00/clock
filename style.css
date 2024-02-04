@@ -185,7 +185,6 @@ body {
 #ring {
     top: 0px;
     left: 50%;
-    width: 11vw;
     padding: 2px;
     border-radius: 5px;
     font-weight: 500;
@@ -233,4 +232,25 @@ body {
 
 #alarmlist div button::hover {
     cursor: pointer;
+}
+@media screen and (max-width:1000px)
+{
+    #clock_body{
+        width: 40vh;
+        height: 40vh;
+    }
+}
+@media screen and (max-width:800px)
+{
+    #clock_body{
+        width: 30vh;
+        height: 30vh;
+    }
+    #title{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    body{
+        gap: 100px;
+    }
 }
