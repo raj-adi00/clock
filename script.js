@@ -16,6 +16,7 @@ window.addEventListener('load', () => {
     let alarmadd = document.getElementById("ring");
     let val = 0;
     alarmadd.addEventListener("click", () => {
+        
         let alarmlist = document.getElementById("alarmlist");
         let makesound = document.createElement("div");
         let alarm_hour = prompt("Enter Hours:");
@@ -30,15 +31,35 @@ window.addEventListener('load', () => {
         makesound.appendChild(button);
         alarmlist.appendChild(makesound);
         remove_alarm = document.querySelectorAll("#alarmlist div");
+        console.log(settime_hour);
         for (let index = 0; index < remove_alarm.length; index++) {
             remove_alarm[index].addEventListener("click", () => {
                 document.getElementById("alarmlist").removeChild(remove_alarm[index]);
-                settime_hour[index]=25;
-                settime_minute[index]=61;
+                let temp=[];
+                let temp_minute=[];
+                for(let i=0;i<index;i++)
+                {
+                    if(i==index)
+                    {
+                        i--;
+                        continue;
+                    }
+                else
+                {
+                    temp[i]=settime_hour[i];
+                    temp_minute[i]=settime_minute[i];
+                }
+          
+                }
+                settime_hour=temp;
+               settime_minute=temp_minute;
+               console.log(settime_minute);
+                console.log(settime_hour);
             });
+
         }
     });
-    let tone = new Audio("alarm_tone.mp3");
+    var tone = new Audio("alarm_tone.mp3");
     function play_music() {
         tone.play();
         setTimeout(() => {
@@ -59,6 +80,7 @@ window.addEventListener('load', () => {
         hour.style.transform = `rotate(${hour_time * 30 - 90 + 0.5 * minute_time}deg)`;
         for (let index = 0; index < settime_hour.length; index++) {
             if (settime_hour[index] == hour_time && settime_minute[index] == minute_time && second_time == 0) {
+               console.log('hi');
                 play_music();
             }
         }
